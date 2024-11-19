@@ -44,6 +44,13 @@ void loop()
         case false:  // your hand is close to the sensor
           break;
       }
+      switch (digitalRead(0)) {
+        case true:  // your hand is on the sensor
+          xmotion.ArcTurn(63,16,3); // %100 Speed, both motor forward 100mS
+          break;
+        case false:  // your hand is close to the sensor
+          break;
+      }
 
   while(digitalRead(10) == false)
   {
