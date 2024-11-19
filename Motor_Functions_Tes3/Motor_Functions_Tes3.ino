@@ -3,7 +3,6 @@
 
 void setup()
 {
-  //Serial.begin(9600);
   pinMode(9, OUTPUT);
   pinMode(10, INPUT);
   pinMode(A1,INPUT);//DREAPTA
@@ -14,14 +13,14 @@ void setup()
 
   while(digitalRead(10) == false)
   {
-       digitalWrite(9,1); 
+    digitalWrite(9,1); 
   }
 
   digitalWrite(9,0);
 }
 
 void loop()
- {
+{
 
     digitalWrite(9,1);
 
@@ -37,20 +36,17 @@ void loop()
           break;
         case false:  // your hand is close to the sensor
           break;
-        }
+      }
 
-
-
-        
-  
   while(digitalRead(10) == false)
   {
-     digitalWrite(9,0);
+    digitalWrite(9,0);
     xmotion.StopMotors(1);  // 100ms Stop Both Motors
   }
-    
- 
-  // Serial.print(analogRead(A4));
-  // Serial.print(" ");
-  // Serial.println(analogRead(A5));
+  }
+  while(digitalRead(10) == false)
+  {
+    digitalWrite(9,0);
+    xmotion.StopMotors(1);  // 100ms Stop Both Motors
+  }
 }
