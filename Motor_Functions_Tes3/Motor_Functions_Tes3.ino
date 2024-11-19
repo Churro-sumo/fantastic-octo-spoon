@@ -30,7 +30,7 @@ void loop() {
         case false:  // your hand is close to the sensor
           break;
     }
-  }else{
+  } else {
     digitalWrite(9,0);
     xmotion.StopMotors(1);  // 100ms Stop Both Motors
   }
