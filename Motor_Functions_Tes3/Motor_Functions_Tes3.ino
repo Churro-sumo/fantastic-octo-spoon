@@ -29,17 +29,6 @@ void loop() {
           break;
         case false:  // your hand is close to the sensor
           break;
-//      switch (digitalRead()) {
-//        case true:  // your hand is on the sensor
-//          xmotion.Forward(63,3); // %100 Speed, both motor forward 100mS
-//          break;
-//        case false:  // your hand is close to the sensor
-//          break;
-  }
-//      if(digitalRead(1) == true){
-//        xmotion.Forward(63,3); // %100 Speed, both motor forward 100mS.
-//        // || digitalRead(0) == true || digitalRead(A1) == true || digitalRead(A2) == true || digitalRead(A4) == true
-//      }
     }
   }else{
     digitalWrite(9,0);
