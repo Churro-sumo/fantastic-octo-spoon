@@ -22,7 +22,10 @@ void setup()
 
 void loop()
 {
-
+  while(digitalRead(10) == false)
+  {
+    digitalWrite(9,0);
+    xmotion.StopMotors(1);  // 100ms Stop Both Motors
     digitalWrite(9,1);
 
     if (analogRead(A5) < 400) {
@@ -52,14 +55,9 @@ void loop()
         case false:  // your hand is close to the sensor
           break;
       }
-
-  while(digitalRead(10) == false)
-  {
-    digitalWrite(9,0);
-    xmotion.StopMotors(1);  // 100ms Stop Both Motors
   }
   }
-  while(digitalRead(10) == false)
+  if(digitalRead(10) == false)
   {
     digitalWrite(9,0);
     xmotion.StopMotors(1);  // 100ms Stop Both Motors
