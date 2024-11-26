@@ -2,6 +2,7 @@
 #include "fish.h"
 static int argument1 = 16;
 static int argument2 = 63;
+static int argument =
 void setup()
 {
   pinMode(9, OUTPUT);
@@ -42,6 +43,20 @@ void loop()
       switch (digitalRead(0)) {
         case true:  // your hand is on the sensor
           xmotion.ArcTurn(argument2,argument1,3); // %100 Speed, both motor forward 100mS
+          break;
+        case false:  // your hand is close to the sensor
+          break;
+      }
+      switch (digitalRead(A2)) {
+        case true:  // your hand is on the sensor
+          xmotion.ArcTurn(argument2,argument3,3); // %100 Speed, both motor forward 100mS
+          break;
+        case false:  // your hand is close to the sensor
+          break;
+      }
+      switch (digitalRead(1)) {
+        case true:  // your hand is on the sensor
+          xmotion.ArcTurn(argument3,argument2,3); // %100 Speed, both motor forward 100mS
           break;
         case false:  // your hand is close to the sensor
           break;
