@@ -1,3 +1,4 @@
+//fish
 #include <xmotion.h>
 #include "fish.h"
 static int argument1 = 8;
