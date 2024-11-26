@@ -1,8 +1,8 @@
 #include <xmotion.h>
 #include "fish.h"
-static int argument1 = 16;
-static int argument2 = 63;
-static int argument3 = 32;
+static int argument1 = 8;
+static int argument2 = 33;
+static int argument3 = 16;
 void setup()
 {
   pinMode(9, OUTPUT);
