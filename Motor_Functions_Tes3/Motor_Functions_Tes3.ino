@@ -11,21 +11,12 @@ void setup()
   pinMode(4,INPUT);//MIJOC
   pinMode(1,INPUT);//STANGADIAGONALA
   pinMode(0,INPUT);//STANGA
-
-  while(digitalRead(10) == false)
-  {
-    digitalWrite(9,1); 
-  }
-
-  digitalWrite(9,0);
 }
 
 void loop()
 {
-  while(digitalRead(10) == false)
-  {
-    digitalWrite(9,0);
-    xmotion.StopMotors(1);  // 100ms Stop Both Motors
+  bool t = digitalRead(10);
+  if(t == true){
     digitalWrite(9,1);
 
     if (analogRead(A5) < 400) {
@@ -56,9 +47,7 @@ void loop()
           break;
       }
   }
-  }
-  if(digitalRead(10) == false)
-  {
+  } else {
     digitalWrite(9,0);
     xmotion.StopMotors(1);  // 100ms Stop Both Motors
   }
