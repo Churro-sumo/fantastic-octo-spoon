@@ -2,7 +2,7 @@
 #include "fish.h"
 static int argument1 = 16;
 static int argument2 = 63;
-static int argument =
+static int argument3 = 32;
 void setup()
 {
   pinMode(9, OUTPUT);
